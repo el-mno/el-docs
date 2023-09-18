@@ -43,7 +43,11 @@ const config = {
                     editUrl:
                         'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
                 },
-                blog: false
+                blog: false,
+                theme: {
+                    customCss: require.resolve('./src/css/custom.css')
+                }
+
             }),
         ],
     ],
@@ -90,7 +94,7 @@ const config = {
                             {
                                 label: 'Knowledge Transfer',
                                 to: '/docs/category/knowledge-transfer'
-              }
+                            }
                         ],
                     },
 
