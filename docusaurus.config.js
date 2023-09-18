@@ -22,6 +22,13 @@ const config = {
     trailingSlash: false,
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
+    plugins: [
+        [require.resolve("@easyops-cn/docusaurus-search-local"),
+        {
+            highlightSearchTermsOnTargetPage: true,
+            docsRouteBasePath: "/"
+        }]
+    ],
 
     // Even if you don't use internalization, you can use this field to set useful
     // metadata like html lang. For example, if your site is Chinese, you may want
@@ -33,11 +40,11 @@ const config = {
 
     presets: [
         [
-            'classic',
-            /** @type {import('@docusaurus/preset-classic').Options} */
+            '@docusaurus/preset-classic',
             ({
                 docs: {
                     sidebarPath: require.resolve('./sidebars.js'),
+                    routeBasePath: "/",
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
                     // editUrl:
@@ -64,12 +71,12 @@ const config = {
                     src: 'img/el.svg',
                 },
                 items: [
-                    {
-                        type: 'docSidebar',
-                        sidebarId: 'documentationSidebar',
-                        position: 'left',
-                        label: 'Documentation',
-                    },
+                    // {
+                    //     type: 'docSidebar',
+                    //     sidebarId: 'documentationSidebar',
+                    //     position: 'left',
+                    //     label: 'Documentation',
+                    // },
                     {
                         href: 'https://github.com/el-mno',
                         label: 'GitHub',
@@ -77,30 +84,30 @@ const config = {
                     },
                 ],
             },
-            footer: {
-                style: 'dark',
-                links: [
-                    {
-                        title: 'Documentation Samples',
-                        items: [
-                            {
-                                label: 'API Documentation',
-                                to: '/docs/intro',
-                            },
-                            {
-                                label: 'Tutorial',
-                                to: '/docs/category/tutorial',
-                            },
-                            {
-                                label: 'Knowledge Transfer',
-                                to: '/docs/category/knowledge-transfer'
-                            }
-                        ],
-                    },
+            // footer: {
+            //     style: 'dark',
+            //     links: [
+            //         {
+            //             title: 'Documentation Samples',
+            //             items: [
+            //                 {
+            //                     label: 'API Documentation',
+            //                     to: '/docs/intro',
+            //                 },
+            //                 {
+            //                     label: 'Tutorial',
+            //                     to: '/docs/category/tutorial',
+            //                 },
+            //                 {
+            //                     label: 'Knowledge Transfer',
+            //                     to: '/docs/category/knowledge-transfer'
+            //                 }
+            //             ],
+            //         },
 
-                ],
-                copyright: `Copyright © ${new Date().getFullYear()} El Techwriting Built with Docusaurus.`,
-            },
+            //     ],
+            //     copyright: `Copyright © ${new Date().getFullYear()} El Techwriting Built with Docusaurus.`,
+            // },
             prism: {
                 additionalLanguages: ['docker'],
                 theme: lightCodeTheme,
