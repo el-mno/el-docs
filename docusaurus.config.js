@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/duotoneDark');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: 'el\'s techwriting portfolio',
-    tagline: 'a look into some samples of my techwriting',
+    title: 'technical writing samples',
+    tagline: 'a peek into my style of documentation',
     favicon: 'img/el.ico',
     // Set the production url of your site here
     url: 'https://el-techwriting.netlify.app',
@@ -40,8 +40,8 @@ const config = {
                     sidebarPath: require.resolve('./sidebars.js'),
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
-                    editUrl:
-                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+                    // editUrl:
+                    //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
                 },
                 blog: false,
                 theme: {
